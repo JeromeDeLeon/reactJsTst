@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 class SelectReligion extends Component {
     render() {
         return (
-                <select name="religion" ref={this.props.form.register}>
+				<select value={this.props.profile.religion}
+				name="religion" ref={this.props.form.register}
+                onChange={(input) => 
+                    this.props.setProfile({ ...this.props.profile, 
+                        [input.target.name]: input.target.value })
+                        }
+                >
                     <option value="">Select...</option>
                     <option value="agnostic">Agnostic</option>
 		            <option value="atheist">Atheist</option>

@@ -1,28 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
-import "./styles.css";
+import './index.css';
 import App from './App';
-//import FileUploader from './component/FileUploder'
-//import Example from './component/Example'
-import CreateProfile from './component/CreateProfile'
 import { BrowserRouter as Router } from 'react-router-dom';
-//import Upload from './component/Upload'
-//import App from './component/PhotoPreviewUpload'
-//import AutocompletePlaces from './component/AutocompletePlaces'
-import LoadProfile from './component/LoadProfile'
-import LoadProfile2 from './component/LoadProfile2'
-import * as serviceWorker from './serviceWorker';
 
-import history from './component/history'
+// ReactDOM.render(<App />, document.getElementById('root'));
 
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
+// // Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();
 
-// ReactDOM.render(    
-//    <Router> 
-//        <CreateProfile />
-//    </Router>,
-//    document.getElementById('root')
-//    );
-
-ReactDOM.render(<CreateProfile />, document.getElementById('root'));
-
+ReactDOM.render(    
+    <Router> 
+        <App />
+    </Router>,
+    document.getElementById('root')
+);

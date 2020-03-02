@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 export class SelectEthnicity extends Component {
     render() {
         return (
-                <select name="ethnicity" ref={this.props.form.register}>
+                <select value={this.props.profile.ethnicity} 
+                name="ethnicity" ref={this.props.form.register}
+                onChange={(input) => 
+                    this.props.setProfile({ ...this.props.profile, 
+                        [input.target.name]: input.target.value })
+                        }
+                >
                     <option value="">Select...</option>
                     <option value="white">White</option>
                     <option value="southAsian">South Asian</option>
